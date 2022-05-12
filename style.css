@@ -1,0 +1,455 @@
+/* Reset CSS */
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* Style Apple Project */
+
+/* Variables du projet */
+:root {
+  /* Couleurs */
+  --framboise: #ff2560;
+  --azure: #068cec;
+  --nuage: #f7f7f7;
+  --galet: #bdbdbd;
+  --mouse: #4d4d4d;
+  --grizou: #252525;
+  /* Typo */
+  --minot: 10px;
+  --petit: 14px;
+  --normal: 16px;
+  --big: 38px;
+  --leger: 200;
+  --regulier: 400;
+  --gras: 600;
+}
+
+/* Typographie */
+h1,
+h2,
+h3,
+h4,
+a {
+  color: var(--grizou);
+  font-family: "Montserrat", sans-serif;
+  text-decoration: none;
+  font-weight: var(--gras);
+}
+h5,
+h6,
+p {
+  font-family: "Open Sans", sans-serif;
+}
+
+/* Structure du projet */
+
+/* Container */
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: var(--grizou);
+}
+.player {
+  display: grid;
+  grid-template-columns: 1.25fr 4fr;
+  height: 600px;
+  width: 1000px;
+  background-color: #fff;
+  border-radius: 15px;
+}
+
+/* Barre lattérale */
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: 100%;
+  background-color: var(--nuage);
+  border-radius: 15px 0 0 15px;
+}
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 80px;
+}
+.nav {
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  height: 120px;
+  font-size: var(--normal);
+}
+.nav_item a {
+  transition: 150ms ease-out;
+}
+.nav_item a:hover {
+  background-color: var(--framboise);
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 5px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  transition: 150ms ease-in;
+}
+/* Active JS */
+.nav_item.active a {
+  background-color: var(--framboise);
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 5px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  transition: 150ms ease-in;
+}
+.theme {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.theme_title,
+.category,
+.music_title {
+  padding-top: 10px;
+  padding-bottom: 5px;
+  text-transform: uppercase;
+  color: var(--galet);
+  font-weight: var(--gras);
+  letter-spacing: 1px;
+}
+.theme_list_item {
+  display: flex;
+  align-items: center;
+}
+.theme_list_item span svg {
+  width: 20px;
+  padding-right: 5px;
+  color: var(--grizou);
+  transition: 100ms ease-out;
+}
+.theme_list_item span svg:hover {
+  color: var(--framboise);
+  padding-right: 10px;
+  transition: 100ms ease-in;
+}
+
+/* Section */
+
+/* Infos */
+.header {
+  height: 300px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+.infos {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  height: 150px;
+  width: 50%;
+}
+.infos div {
+  align-self: center;
+}
+.artist {
+  font-size: var(--big);
+  font-weight: var(--gras);
+}
+.infos_button {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 50px;
+}
+.play,
+.follow-btn {
+  height: 30px;
+  padding: 5px 20px;
+  border-radius: 100px;
+  text-transform: uppercase;
+  color: var(--mouse);
+  font-weight: var(--gras);
+  font-size: var(--minot);
+  letter-spacing: 1px;
+  border: 2px solid var(--galet);
+  cursor: pointer;
+}
+.play {
+  background-color: var(--galet);
+}
+.follow-btn {
+  background-color: transparent;
+}
+
+/* Image */
+.image img {
+  max-height: 290px;
+  border-top-right-radius: 10px;
+}
+
+/* Musiques */
+.music {
+  padding: 15px;
+}
+.music_reading {
+  display: grid;
+  grid-template-columns: 0.7fr 0.7fr 1.2fr 3.2fr 7fr 0.5fr;
+  padding: 7px;
+  cursor: pointer;
+  transition: 150ms ease-out;
+}
+.music_reading_cover img {
+  width: 30px;
+  border-radius: 5px;
+}
+.music_reading_option {
+  transform: rotate(-90deg);
+}
+
+.music_reading_icon svg,
+.music_reading_plus svg,
+.music_reading_cover svg,
+.music_reading_option svg {
+  width: 20px;
+  color: var(--mouse);
+  transition: 150ms ease-out;
+}
+
+.music_reading_icon,
+.music_reading_plus,
+.music_reading_cover,
+.music_reading_time,
+.music_reading_option {
+  display: flex;
+  align-items: center;
+}
+
+.music_reading_icon,
+.music_reading_plus,
+.music_reading_cover,
+.music_reading_option {
+  justify-content: center;
+}
+
+.music_reading_cover svg {
+  position: absolute;
+  color: #fff;
+}
+
+.music_reading_time {
+  justify-content: flex-end;
+}
+
+/* Active JS */
+.music_reading:hover {
+  background-color: var(--azure);
+  color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  transition: 150ms ease-in;
+}
+
+.music_reading_icon svg:hover,
+.music_reading_plus svg:hover,
+.music_reading_cover svg:hover,
+.music_reading_option svg:hover {
+  color: #fff;
+  transition: 150ms ease-in;
+}
+
+.music_reading_plus svg:hover {
+  transform: rotate(-180deg);
+  transition: 150ms ease-in;
+}
+
+/* Popup */
+.popup,
+.follow {
+  display: grid;
+  grid-template-rows: 1fr 7fr;
+  position: absolute;
+  z-index: 1000;
+  padding: 5px 10px;
+  background-color: var(--nuage);
+  width: 300px;
+  height: 200px;
+  box-shadow: 0 0 200px 1000px rgba(0, 0, 0, 0.4);
+  border-radius: 10px;
+  transition: 700ms ease-in-out;
+}
+
+.follow {
+  display: none;
+  width: 400px;
+  height: 150px;
+}
+
+.popup_title,
+.follow_title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.popup_title svg,
+.follow_title svg {
+  cursor: pointer;
+  transition: 400ms ease-out;
+}
+
+.popup_title svg,
+.follow_title svg:hover {
+  transform: rotate(-180deg);
+  transition: 400ms ease-in;
+}
+
+.popup_content,
+.follow_content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.popup_content img {
+  width: 100px;
+}
+
+.follow_social svg {
+  width: 50px;
+}
+
+.follow_social svg:nth-child(1) {
+  color: blue;
+}
+.follow_social svg:nth-child(2) {
+  color: skyblue;
+}
+.follow_social svg:nth-child(3) {
+  color: red;
+}
